@@ -15,13 +15,16 @@ Answer the following questions:
 1. Le test ne passe pas car les flottants utilisés peuvent contenir des arrondis. Par défaut, 1,20001 n'est pas égal a 1,2. Pour contrer ce problème d'arrondi on peut préciser une précision avec : `Assert.assertEquals(expected, actual, delta)`, ce qui donne dans notre exemple : `Assert.assertEquals(3 * 0.4, 1.2, 0.001)`.
 
 2. D'après la documentation, assert same vérifie que les deux objets sont identiques et assert equals vérifie que les valeurs sont égales. Dans la pratique l'adresse mémoire est utilisée dans le premier et la méthode equals est appelée dans le second.<br>
-    Integer int1 = new Integer(5); <br>
-    Integer int2 = new Integer(2);<br>
-    Integer int3 = new Integer(3);<br>
-    Assert.assertSame(int1, int2 + int3);<br>
-    Assert.assertEqual(int1, int2 + int3);<br>
-Dans cet exemple, le assert equals sera vrai car la valeur est la même mais ce ne sont pas les mêmes objets donc le assertSame sera faux.
+    ```java
+   Integer int1 = new Integer(5);
+    Integer int2 = new Integer(2);
+    Integer int3 = new Integer(3);
+    Assert.assertSame(int1, int2 + int3);
+    Assert.assertEqual(int1, int2 + int3);
+   ```
+    Dans cet exemple, le assert equals sera vrai car la valeur est la même mais ce ne sont pas les mêmes objets donc le assertSame sera faux.
 
-3. //TODO trouver une utilisation 
+3. Il est possible d'utiliser les fail() pour passer des messages customiés.
+//TODO Faire un cas d'utilisation
 
-4. Cette modification dans la syntaxe rends les tests plus permissifs, il est ainsi possible de tester les retours de plusieurs manière possible puis de tester que l'exception a bien été levée.
+5. Cette modification dans la syntaxe rends les tests plus permissifs, il est ainsi possible de tester les retours de plusieurs manière possible puis de tester que l'exception a bien été levée.
