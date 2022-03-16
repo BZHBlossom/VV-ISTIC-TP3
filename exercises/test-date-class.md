@@ -53,3 +53,4 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1. Date() : 0,0,0 ; 
