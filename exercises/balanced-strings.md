@@ -31,7 +31,7 @@ public static class Main() {
                 else nbOpenCroch--;
             }
         }
-        return true;
+        return nbOpenAcc == 0 && nbOpenPar == 0 && nbOpenCroch == 0;
     }
 }
 ```
@@ -55,4 +55,6 @@ in [tp3-balanced-strings](../code/tp3-balanced-strings) to complete this exercis
 
 ## Answer
 
-1. 
+1. => "(){}[]", "(abcs[oqisnd]{})", "ceci n est pas un test", "(12{}[(){}])", "", "({})[", "({}\])"
+2. L'ensemble de test couvre 100% du programme.
+3. 
