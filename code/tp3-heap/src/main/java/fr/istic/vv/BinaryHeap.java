@@ -80,7 +80,7 @@ class BinaryHeap<T> {
 
             int i = 0;
             while (!estFeuille(i)){
-                int j = smallerChild(i);
+                int j = plusPetitFils(i);
                 swap(i,j);
                 i = j;
             }
@@ -126,7 +126,7 @@ class BinaryHeap<T> {
         return i==0 ? 0 : (i - 1) / 2;
     }
 
-    private int smallerChild(int i) {
+    private int plusPetitFils(int i) {
         if (!estFeuille(i)) {
             if (aFilsGauche(i) && aFilsDroit(i)) {
                 if (comparator.compare(heapAsArray.get(getFilsGauche(i)), heapAsArray.get(getfilsDroit(i))) < 0) return getFilsGauche(i);
