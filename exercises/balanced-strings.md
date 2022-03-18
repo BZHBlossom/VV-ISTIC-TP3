@@ -55,6 +55,8 @@ in [tp3-balanced-strings](../code/tp3-balanced-strings) to complete this exercis
 
 ## Answer
 
-1. => "(){}[]", "(abcs[oqisnd]{})", "ceci n est pas un test", "(12{}[(){}])", "", "({})[", "({}\])"
-2. L'ensemble de test couvre 100% du programme.
-3. 
+1. Pour avoir un bon ensemble de test, il faut tester les cas avec des symboles parasites, une string vide et quelques cas avec/sans parenthèse ouvrante/fermante
+=> "(){}[]", "(abcs[oqisnd]{})", "ceci n est pas un test", "(12{}[(){}])", "", "({})[", "({}\])"
+3. L'ensemble de test couvre 100% du programme.
+4. Ce n'est pas le cas de notre programme.
+5. 100% des mutants ont étés tués par PITtest.
