@@ -3,7 +3,6 @@ package fr.istic.vv;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Classe qui représente un tas minimié
@@ -80,7 +79,7 @@ class BinaryHeap<T> {
         if (!heapAsArray.isEmpty()){
 
             int i = 0;
-            while (!estRacine(i)){
+            while (!estFeuille(i)){
                 int j = smallerChild(i);
                 swap(i,j);
                 i = j;
@@ -101,7 +100,7 @@ class BinaryHeap<T> {
         heapAsArray.set(y, aux);
     }
 
-    private boolean estRacine(int node){
+    private boolean estFeuille(int node){
         return !(aFilsGauche(node) || aFilsDroit(node));
     }
 
@@ -128,7 +127,7 @@ class BinaryHeap<T> {
     }
 
     private int smallerChild(int i) {
-        if (!estRacine(i)) {
+        if (!estFeuille(i)) {
             if (aFilsGauche(i) && aFilsDroit(i)) {
                 if (comparator.compare(heapAsArray.get(getFilsGauche(i)), heapAsArray.get(getfilsDroit(i))) < 0) return getFilsGauche(i);
                 else
